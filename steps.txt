@@ -1,0 +1,221 @@
+Script started on 2022-09-10 18:40:27+00:00 
+
+pip3 install -r requirements.txt 
+
+	Requirement already satisfied: fastapi==0.83.0 in /usr/local/lib/python3.10/dist-packages (from -r requirements.txt (line 1)) (0.83.0)
+	Requirement already satisfied: uvicorn in /usr/lib/python3/dist-packages (from -r requirements.txt (line 2)) (0.13.3)
+	Requirement already satisfied: pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2 in /usr/lib/python3/dist-packages (from fastapi==0.83.0->-r requirements.txt (line 1)) (1.7.4)
+	Requirement already satisfied: starlette==0.19.1 in /usr/local/lib/python3.10/dist-packages (from fastapi==0.83.0->-r requirements.txt (line 1)) (0.19.1)
+	Ignoring contextlib2: markers 'python_version < "3.7"' don't match your environment
+	Ignoring typing-extensions: markers 'python_version < "3.10"' don't match your environment
+	Requirement already satisfied: anyio<5,>=3.4.0 in /usr/local/lib/python3.10/dist-packages (from starlette==0.19.1->fastapi==0.83.0->-r requirements.txt (line 1)) (3.6.1)
+	Ignoring contextvars: markers 'python_version < "3.7"' don't match your environment
+	Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
+	Ignoring typing-extensions: markers 'python_version < "3.8"' don't match your environment
+	Requirement already satisfied: sniffio>=1.1 in /usr/lib/python3/dist-packages (from anyio<5,>=3.4.0->starlette==0.19.1->fastapi==0.83.0->-r requirements.txt (line 1)) (1.1.0)
+	Requirement already satisfied: idna>=2.8 in /usr/lib/python3/dist-packages (from anyio<5,>=3.4.0->starlette==0.19.1->fastapi==0.83.0->-r requirements.txt (line 1)) (2.10)
+	Requirement already satisfied: dataclasses>=0.6 in /usr/local/lib/python3.10/dist-packages (from pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2->fastapi==0.83.0->-r requirements.txt (line 1)) (0.6)
+	Requirement already satisfied: contextvars>=2.1 in /usr/local/lib/python3.10/dist-packages (from sniffio>=1.1->anyio<5,>=3.4.0->starlette==0.19.1->fastapi==0.83.0->-r requirements.txt (line 1)) (2.4)
+	Requirement already satisfied: immutables>=0.9 in /usr/local/lib/python3.10/dist-packages (from contextvars>=2.1->sniffio>=1.1->anyio<5,>=3.4.0->starlette==0.19.1->fastapi==0.83.0->-r requirements.txt (line 1)) (0.18)
+	Ignoring typing-extensions: markers 'python_version < "3.8"' don't match your environment
+	Requirement already satisfied: typing-extensions in /usr/lib/python3/dist-packages (from uvicorn->-r requirements.txt (line 2)) (3.7.4.3)
+	Requirement already satisfied: typing>=3.7.4 in /usr/local/lib/python3.10/dist-packages (from typing-extensions->uvicorn->-r requirements.txt (line 2)) (3.7.4.3)
+
+python3 -m uvicorn main:app --reload
+
+	INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+	INFO:     Started reloader process [7791] using watchgod
+	INFO:     Started server process [7793]
+	INFO:     Waiting for application startup.
+	INFO:     Application startup complete.
+	INFO:     127.0.0.1:57050 - "GET / HTTP/1.1" 200 OK
+
+sudo apt-get install nodejs
+
+	Reading package lists... Done
+	Building dependency tree... Done
+	Reading state information... Done
+	nodejs is already the newest version (16.15.1+dfsg-1).
+	The following packages were automatically installed and are no longer required:
+	  gir1.2-ayatanaappindicator3-0.1 libgeos-3.9.1 libjsoncpp24 libmbedcrypto3 libmbedtls12 libmbedx509-0
+	  libopenshot-audio7 libopenshot19 libpython3.9-dev libsasl2-modules:i386 libyara8 python3.9 python3.9-dev
+	  python3.9-minimal
+	Use 'sudo apt autoremove' to remove them.
+	0 upgraded, 0 newly installed, 0 to remove and 1648 not upgraded.
+
+npm install -g create-react-app
+	
+	npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+
+	changed 67 packages, and audited 68 packages in 8s
+
+	4 packages are looking for funding
+	  run `npm fund` for details
+
+	3 high severity vulnerabilities
+
+	To address all issues, run:
+	  npm audit fix
+
+	Run `npm audit` for details.
+
+create-react-app linx
+
+	Creating a new React app in /tmp/react/linx.
+
+	Installing packages. This might take a couple of minutes.
+	Installing react, react-dom, and react-scripts with cra-template...
+
+	[..................] / idealTree:react-scripts: sill fetch manifest scheduler@^0.23.0
+	[     .............] / idealTree:eslint-plugin-testing-library: sill fetch manifest string.prototype.matchall@^4.0.
+
+	added 1394 packages in 4m
+
+	209 packages are looking for funding
+	  run `npm fund` for details
+
+	Initialized a git repository.
+
+	Installing template dependencies using npm...
+
+	added 56 packages in 12s
+
+	209 packages are looking for funding
+	  run `npm fund` for details
+	Removing template package using npm...
+
+
+	removed 1 package, and audited 1450 packages in 5s
+
+	209 packages are looking for funding
+	  run `npm fund` for details
+
+	6 high severity vulnerabilities
+
+	To address all issues (including breaking changes), run:
+	  npm audit fix --force
+
+	Run `npm audit` for details.
+
+	Created git commit.
+
+	Success! Created linx at tmp/react/linx
+	Inside that directory, you can run several commands:
+
+	  npm start
+	    Starts the development server.
+
+	  npm run build
+	    Bundles the app into static files for production.
+
+	  npm test
+	    Starts the test runner.
+
+	  npm run eject
+	    Removes this tool and copies build dependencies, configuration files
+	    and scripts into the app directory. If you do this, you can’t go back!
+
+	We suggest that you begin by typing:
+
+	  cd linx
+	  npm start
+
+	Happy hacking!
+
+
+cd /tmp/react/linx/
+
+npm start
+
+	Compiled successfully!
+
+	You can now view linx in the browser.
+
+	  Local:            http://localhost:3000
+	  On Your Network:  http://192.168.15.5:3000
+
+	Note that the development build is not optimized.
+	To create a production build, use npm run build.
+
+	webpack compiled successfully
+
+sudo --login --user=postgres psql -p 5433
+
+apt -y install postgresql
+
+	Reading package lists... Done
+	Building dependency tree... Done
+	Reading state information... Done
+	Suggested packages:
+	  postgresql-doc
+	The following NEW packages will be installed:
+	  postgresql
+	0 upgraded, 1 newly installed, 0 to remove and 1641 not upgraded.
+	Need to get 0 B/66.7 kB of archives.
+	After this operation, 71.7 kB of additional disk space will be used.
+	Selecting previously unselected package postgresql.
+	(Reading database ... 364620 files and directories currently installed.)
+	Preparing to unpack .../postgresql_14+242_all.deb ...
+	Unpacking postgresql (14+242) ...
+	Setting up postgresql (14+242) ...
+	Scanning processes...                                                                                               
+	Scanning processor microcode...                                                                                     
+	Scanning linux images...                                                                                            
+
+	Running kernel seems to be up-to-date.
+
+	The processor microcode seems to be up-to-date.
+
+	No services need to be restarted.
+
+	No containers need to be restarted.
+
+	No user sessions are running outdated binaries.
+
+systemctl restart postgresql
+
+netstat -nlpt|grep postg
+	tcp        0      0 127.0.0.1:5433          0.0.0.0:*               LISTEN      3984/postgres       
+	tcp6       0      0 ::1:5433                :::*                    LISTEN      3984/postgres 
+
+sudo --login --user=postgres psql -p 5433
+
+	sudo: unable to change directory to /home/postgres: No such file or directory
+	┏━(Message from Kali developers)
+	┃
+	┃ This is a minimal installation of Kali Linux, you likely
+	┃ want to install supplementary tools. Learn how:
+	┃ ⇒ https://www.kali.org/docs/troubleshooting/common-minimum-setup/
+	┃
+	┃ We have kept /usr/bin/python pointing to Python 2 for backwards
+	┃ compatibility. Learn how to change this and avoid this message:
+	┃ ⇒ https://www.kali.org/docs/general-use/python3-transition/
+	┃
+	┗━(Run: “touch ~/.hushlogin” to hide this message)
+	could not change directory to "/root": Permission denied
+	psql (14.1 (Debian 14.1-5))
+	Type "help" for help.
+
+postgres=# 
+
+postgres=# \list
+	                                  List of databases
+	   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+	-----------+----------+----------+-------------+-------------+-----------------------
+	 postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+	 template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+	           |          |          |             |             | postgres=CTc/postgres
+	 template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+	           |          |          |             |             | postgres=CTc/postgres
+	(3 rows)
+
+postgres=# CREATE DATABASE linx;
+	CREATE DATABASE
+
+postgres=# \c linx;
+	You are now connected to database "linx" as user "postgres".
+
+linx=# ALTER USER postgres PASSWORD 'password';
+
+Script done on 2022-09-10 19:21:04+00:00 [COMMAND_EXIT_CODE="0"]
+

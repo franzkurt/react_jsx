@@ -1,0 +1,3 @@
+fastapi==0.83.0
+uvicorn
+Do you want to install it? (N/y)
