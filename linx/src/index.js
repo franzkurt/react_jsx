@@ -28,7 +28,6 @@ export const Form = () => {
     }
   
     return(
-        <div class="jumbotron">
         <div class="container">
             <form onSubmit={onSubmitHandler} class="form-inline">
                 <div class="form-group"><label htmlFor="first_name">Cidade</label></div>
@@ -39,7 +38,6 @@ export const Form = () => {
                 <div><input id="Pais" class="form-control w-75" onChange={(e)=>inputChangeHandler(setPais, e)} type="text"/></div>
                 <input type="submit"/>
             </form>
-        </div>
         </div>
     )
 }
@@ -53,34 +51,59 @@ root.render(
 
 function exibePrevisao(retorno_api) {
 
-console.log(retorno_api)
-const list = retorno_api.list
+    // console.log(retorno_api)
+    const list = retorno_api.list
 
-const ComplexList = () => (
-<div class="container">
-    <div class="row">
-            {list.map(item => (
-                <div class="col">
-                  <ul class="list-group">
-                      <li key={item.main.temp} class="list-group-item">
-                      <li class="list-group-item active">{item.dt_txt}</li>
-                        <div>Humidade: {item.main.humidity}</div>
-                        <div>Temp. Máxima: {item.main.temp_max}</div>
-                        <div>Temp. Mínima: {item.main.temp_max}</div>
-                        <div>Descrição: {item.weather[0].description}</div>
-                      </li>
-                  </ul>
-                  </div>
-            ))}
+    const ComplexList = () => (
+    <div class="container">
+        <div class="row">
+                {list.map(item => (
+                    <div class="col">
+                      <ul class="list-group">
+                          <li key={item.main.temp} class="list-group-item">
+                          <li class="list-group-item active">{item.dt_txt}</li>
+                            <div>Humidade: {item.main.humidity}</div>
+                            <div>Temp. Máxima: {item.main.temp_max}</div>
+                            <div>Temp. Mínima: {item.main.temp_max}</div>
+                            <div>Descrição: {item.weather[0].description}</div>
+                          </li>
+                      </ul>
+                      </div>
+                ))}
+          </div>
       </div>
-  </div>
-);
+    );
 
-const root2 = ReactDOM.createRoot(document.getElementById('root2'));
-root2.render(
-  <React.StrictMode>
-    <ComplexList />
-  </React.StrictMode>
-);
+    const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+    root2.render(
+      <React.StrictMode>
+        <ComplexList />
+      </React.StrictMode>
+    );
 
 }
+
+
+function exibeHistorico(historico) {
+    console.log(historico)
+    const ComplexList = () => (
+    <div class="container">
+        {historico.map(item => (
+          <ul class="list-group">
+            <div>{item.timestamp}</div>
+            <div>Query: {item.consulta}</div>
+          </ul>
+        ))}
+      </div>
+    );
+
+    const root3 = ReactDOM.createRoot(document.getElementById('root3'));
+    root3.render(
+      <React.StrictMode>
+        <ComplexList />
+      </React.StrictMode>
+    );
+
+}
+fetch('http://127.0.0.1:8000/historico/').then(retorno=> retorno.json()).then(a=> exibeHistorico(a))
+
